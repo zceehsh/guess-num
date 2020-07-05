@@ -4,11 +4,17 @@
 # 猜错： 要告诉他比答案大、小
 
 import random
-r = random.randint(1,100)
+start = input('请决定随机数字范围开始值： ')
+end = input('请决定随机数字范围结束值： ')
+start = int(start)
+end = int(end)
+
+r = random.randint(start, end)
 count = 0 # 计数
 while True:
 	count += 1 # count = count + 1
-	num = input('请输入1至100间的整数： ')
+	print('请输入', start, '至', end, '之间的整数：')
+	num = input()
 	num = int(num)
 	if num == r:
 		print('终于猜对了！')
